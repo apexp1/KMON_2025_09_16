@@ -7,7 +7,13 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World! 이것은 테스트 입니다.\n";
+    int PlayerHP = 100;
+    int PlayerHealing = 20;
+    int MonsterAttack = 10;
+    PlayerHP += PlayerHealing;
+    PlayerHP -= MonsterAttack;
+   
+    cout << PlayerHP;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
