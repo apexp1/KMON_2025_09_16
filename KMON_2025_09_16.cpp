@@ -2,19 +2,50 @@
 //
 
 #include <iostream>
+#include <conio.h>
+#include <Windows.h>
 
 using namespace std;
 
 int main()
 {
-    int PlayerHP = 100;
-    int PlayerHealing = 20;
-    int MonsterAttack = 10;
-    PlayerHP += PlayerHealing;
-    PlayerHP -= MonsterAttack;
-   
-    cout << PlayerHP;
+    int playerX = 0;
+    int playerY = 0;
+
+    while (true) {
+        char keyCode = (char)_getch();
+
+        if (keyCode == 'q') {
+            break;
+        }
+
+        if (keyCode == 'w') {
+            playerY--;
+        }
+        else if (keyCode == 's') {
+            playerY++;
+        }
+        else if (keyCode == 'a') {
+            playerX--;
+        }
+        else if (keyCode == 'd') {
+            playerX++;
+        }
+
+        system("cls");
+
+        COORD Cur;
+        Cur.X = playerX;
+        Cur.Y = playerY;
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Cur);
+
+        cout << "¹ÚÇÑ½Â" << endl;
+    }
+
+    return 0;
 }
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
