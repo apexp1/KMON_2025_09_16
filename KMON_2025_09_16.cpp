@@ -3,9 +3,11 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World! 이것은 테스트 입니다.\n";
+    cout << "Hello World! 이것은 테스트 입니다.\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
