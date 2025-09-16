@@ -12,6 +12,8 @@ int main()
     int playerX = 0;
     int playerY = 0;
 
+    rand();
+
     while (true) {
         char keyCode = (char)_getch();
 
